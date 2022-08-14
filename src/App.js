@@ -1,7 +1,7 @@
-import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Profile from './components/Profile';
+import './App.css'
+import Header from './components/Header'
+import Nav from './components/Nav'
+import Profile from './components/Profile'
 
 
 
