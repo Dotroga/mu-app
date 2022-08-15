@@ -1,7 +1,7 @@
 import s from './Nav.module.css'
 
 const Nav = () => {
-    return <nav className={s.nav}>
+  return <nav className={s.nav}>
     <div className={s.item}>
       <a>Профиль</a>
     </div>
@@ -17,7 +17,7 @@ const Nav = () => {
     <div className={s.item}>
       <a>Настройки</a>
     </div>
-   </nav>
+  </nav>
 }
 
 export default Nav
