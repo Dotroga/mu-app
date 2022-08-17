@@ -1,8 +1,17 @@
 .nav {
     grid-area: n;
     background-color: rgb(189, 189, 189);
+    margin-right: 4px;
+    height: 100vh;
+    border-radius: 4px;
   }
 
 .item {
-  color: white;
+  color: black;
+  font-size: 18px;
+  margin: 5px 10px 5px 10px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 3px;
+  padding: 4px;
+  font-family: 'DM Sans', sans-serif;
 }
