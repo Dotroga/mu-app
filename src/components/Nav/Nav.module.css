@@ -1,17 +1,29 @@
 .nav {
     grid-area: n;
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(46, 46, 47);
     margin-right: 4px;
     height: 100vh;
     border-radius: 4px;
   }
 
-.item {
-  color: black;
+.item  {
   font-size: 18px;
   margin: 5px 10px 5px 10px;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(74, 74, 75);
   border-radius: 3px;
   padding: 4px;
   font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.item .active{
+    font-size: 18px;
+    margin: 5px 10px 5px 10px;
+    border-radius: 3px;
+    padding: 4px;
+    font-family: 'DM Sans', sans-serif;
+    color: #5fd7f8;
+    text-decoration: none;
+
 }
