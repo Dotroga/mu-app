@@ -1,11 +1,26 @@
 
 .header {
     grid-area: h;
-    background-color:  rgb(46, 46, 46);
+    background: -webkit-linear-gradient(90deg, #1c1c1c,#003470);
+    background: linear-gradient(90deg, #1c1c1c,#003470);
     margin-bottom: 4px;
   }
   
   .header img {
-    width: 80px;
+      width: 45px;
   }
+
+ul{
+    font-size:0;
+    padding: 0;
+}
+ul li{
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 20px;
+    display:inline-block;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
   

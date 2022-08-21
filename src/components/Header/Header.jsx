@@ -1,9 +1,17 @@
 import React from "react";
 import s from './Header.module.css'
+import logo from '../../img/logoHeader.png'
 
 const Header = () => {
     return <header className={s.header}>
-        <img src='https://miro.medium.com/max/1200/1*WA_9JsyqFkge2HwYKcdJQw.png'></img>
+        <ul>
+            <li>
+                <img src={logo}></img>
+            </li>
+            <li>
+                My social network
+            </li>
+        </ul>
     </header>
 }
 
