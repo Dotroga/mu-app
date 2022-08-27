@@ -1,20 +1,44 @@
 .dialogs{
     display: grid;
-    grid-template-columns: 15fr 1fr;
+    grid-template-columns: 20fr 1fr 4fr;
 }
 
-.dialog{
+.dialogsItem{
 
 }
 
-.active {
-    color: red;
+.dialog {
+
 }
+
+.dialogLink {
+    text-decoration: none;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.dialog img {
+    width: 35px;
+    border-radius: 50%;
+}
+
 
 .messages{
-
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .message{
+margin: 5px;
+}
 
+.line {
+    border-left:1px solid black;
+    height: 100ch;
 }
