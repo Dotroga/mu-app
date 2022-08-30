@@ -1,15 +1,25 @@
-.content {
-    grid-area: c;
-}
-
 .item {
     color: rgb(3, 3, 3);
-    background-color: rgb(167, 164, 164);
-    margin: 5px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
     border-radius: 4px;
+    box-shadow:0 0 15px 4px rgba(0,0,4,0.2);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.avaMessage {
+    display: flex;
+    align-items: center
 }
 
 .item img {
-    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
     height: 40px;
+    width: 40px;
+}
+
+.like {
+    text-align: right;
 }
