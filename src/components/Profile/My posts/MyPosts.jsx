@@ -6,6 +6,7 @@ const MyPosts = (props) => {
         <Post message={p.message} likeCount={p.likeCount}/>)
     let newPostElement = React.createRef()
     let AddPost = () => {
+        debugger
         props.addPost()
     }
     let onPostChange = () => {
