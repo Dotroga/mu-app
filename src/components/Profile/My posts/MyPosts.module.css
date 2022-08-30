@@ -1,8 +1,35 @@
-.content {
-    grid-area: c;
-  }
-    
-  .content img {
+.container {
+    background-color: #f1f5f8;
+    margin-right: 100px;
+    margin-left: 70px;
+}
+.container textarea {
+    resize: none;
     width: 100%;
-  }
+    margin-bottom: 10px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow:0 0 15px 4px rgba(0,0,4,0.2);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    outline:none;
+}
+
+.container button {
+    background-color: #0074fe;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.container button:hover{
+    background-color: #014ba5;
+    transition: all 0.25s ease-in;
+}
+
   

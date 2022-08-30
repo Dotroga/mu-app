@@ -4,7 +4,7 @@ import picture from '../../../img/profilePicture.jpg'
 
 const ProfileInfo = () => {
     return <div>
-        <img src={picture}></img>
+        <img className={s.img} src={picture}></img>
         <div>
             ava + descriptions
         </div>

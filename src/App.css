@@ -8,12 +8,12 @@
 }
 
 body {
-  background-color: rgb(241, 241, 241);
+  background-color: #f1f5f8;
 }
 
 .content {
   grid-area: c;
-  background-color: rgb(241, 241, 241);
+  background-color: #f1f5f8;
   height: max-content;
   font-family: 'DM Sans', sans-serif;
 }
