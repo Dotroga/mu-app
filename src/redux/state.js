@@ -88,7 +88,25 @@ let store = {
             this._callSubscriber(this._state)
         }
     }
-
 }
+
+export const addPostActionCreator = () => {
+    return {
+        type: 'ADD-POST'
+    }
+}
+export const updateNewPostTextActionCreator = (text) => {
+    return {
+        type: 'UPDATE_NEW_POST_TEXT',
+        newText: text
+    }
+}
+export const addMessageActionCreator = () => {
+    return {type: 'ADD_MESSAGE'}
+}
+export const updateNewMessagesActionCreator = (text) => {
+    return {type: 'UPDATE_NEW_MESSAGE_TEXT', newMessage:text}
+}
+
 window.store = store
 export default store

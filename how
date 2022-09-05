@@ -1,0 +1,59 @@
+[33mcommit 775d369726afde99ff1c9a322dda1f52d261be52[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Tue Aug 30 22:42:38 2022 +0300
+
+    store
+
+[33mcommit 9b726d1db730c4925bda41b4c272587dd1352814[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Sun Aug 28 22:33:59 2022 +0300
+
+    addMessage, callback
+
+[33mcommit af48246673d664919a12ed540d73693657e410c5[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Sat Aug 27 23:23:23 2022 +0300
+
+    FLUX
+
+[33mcommit 1856e291865dc320b2675bdda333b77f9ed4da43[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Wed Aug 24 00:07:45 2022 +0300
+
+    state
+
+[33mcommit a424f1096116ed4380cf3494d3ec45305aacc1e4[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Sun Aug 21 22:11:44 2022 +0300
+
+    UI - BLL
+
+[33mcommit 17bf36b973840a67c45e89cfda3c73edd1f00dca[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Thu Aug 18 23:56:55 2022 +0300
+
+    messages
+
+[33mcommit 34dd9d89e4e4729864273e11438bd781755ad141[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Thu Aug 18 00:03:15 2022 +0300
+
+    browser-router
+
+[33mcommit 23c40ce4eefd664d40899c63e0afa1fa68045625[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Mon Aug 15 22:30:15 2022 +0300
+
+    folder structure
+
+[33mcommit 7d65ec60b6cad17467bb20cab0963f41a434d0ba[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Sun Aug 14 22:38:21 2022 +0300
+
+    css modules
+
+[33mcommit 81e25318c655830b9803eb9cd278211ba6a15dd8[m
+Author: Vasili Karpenkin <v.karpenkin@gmail.com>
+Date:   Sun Aug 14 11:09:19 2022 +0300
+
+    start git
