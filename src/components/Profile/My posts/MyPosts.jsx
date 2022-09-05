@@ -6,12 +6,11 @@ const MyPosts = (props) => {
         <Post message={p.message} likeCount={p.likeCount}/>)
     let newPostElement = React.createRef()
     let AddPost = () => {
-        debugger
-        props.addPost()
+        props.dispatch({ type: 'ADD-POST'})
     }
     let onPostChange = () => {
         let text = newPostElement.current.value
-        props.updateNewPostText(text)
+        props.dispatch({ type: 'UPDATE_NEW_POST_TEXT', newText: text})
     }
     return (
         <div className={s.container}>

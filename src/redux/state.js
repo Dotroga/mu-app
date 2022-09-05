@@ -32,8 +32,7 @@ let store = {
     _callSubscriber() {
 
     },
-    addPost() {
-        debugger
+    _addPost() {
         let newPost = {
             id: this._state.profilePage.posts.length + 1,
             message: this._state.profilePage.newPostText,
@@ -43,11 +42,11 @@ let store = {
         this._state.profilePage.newPostText = ''
         this._callSubscriber(this._state)
     },
-    updateNewPostText(newText) {
+    _updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText
         this._callSubscriber(this._state)
     },
-    addMessage() {
+    _addMessage() {
         let newMessage = {
             id: this._state.dialogsPage.messages.length + 1,
             message: this._state.dialogsPage.newMessageText
@@ -56,13 +55,40 @@ let store = {
         this._state.dialogsPage.newMessageText = ''
         this._callSubscriber(this._state)
     },
-    updateNewMessageText(newMessage) {
+    _updateNewMessageText(newMessage) {
         this._state.dialogsPage.newMessageText = newMessage
         this._callSubscriber(this._state)
     },
     coolBack(observer) {
         this._callSubscriber = observer
     },
+    dispatch(action) {
+        if(action.type === 'ADD-POST') {
+            let newPost = {
+                id: this._state.profilePage.posts.length + 1,
+                message: this._state.profilePage.newPostText,
+                likeCount: 0
+            }
+            this._state.profilePage.posts.push(newPost)
+            this._state.profilePage.newPostText = ''
+            this._callSubscriber(this._state)
+        } else if (action.type === 'UPDATE_NEW_POST_TEXT') {
+            this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+        } else if (action.type === 'ADD_MESSAGE') {
+            let newMessage = {
+                id: this._state.dialogsPage.messages.length + 1,
+                message: this._state.dialogsPage.newMessageText
+            }
+            this._state.dialogsPage.messages.push(newMessage)
+            this._state.dialogsPage.newMessageText = ''
+            this._callSubscriber(this._state)
+        } else if (action.type === 'UPDATE_NEW_MESSAGE_TEXT') {
+            this._state.dialogsPage.newMessageText = action.newMessage
+            this._callSubscriber(this._state)
+        }
+    }
+
 }
 window.store = store
 export default store

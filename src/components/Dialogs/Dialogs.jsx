@@ -9,11 +9,11 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef()
     let AddMessage = () => {
         let text = newMessageElement.current.value
-        props.addMessage(text)
+        props.dispatch({type: 'ADD_MESSAGE'})
     }
     let onMessageChange = () => {
         let text = newMessageElement.current.value
-        props.updateNewMessageText(text)
+        props.dispatch({type: 'UPDATE_NEW_MESSAGE_TEXT', newMessage:text})
     }
     return <div className={s.dialogs}>
         <div className={s.messages}>
