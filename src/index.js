@@ -1,5 +1,5 @@
 import reportWebVitals from "./reportWebVitals";
-import store from "./redux/store";
+import store from "./redux/redux-store";
 import React from "react";
 import App from "./App";
 import ReactDOM from 'react-dom/client';
@@ -16,6 +16,9 @@ let rerenderEntireTree = (state) => {
     );
 }
 rerenderEntireTree(store.getState())
-store.coolBack(rerenderEntireTree)
+store.subscribe(() => {
+    let state = store.getState()
+    rerenderEntireTree(state)
+})
 
 reportWebVitals();

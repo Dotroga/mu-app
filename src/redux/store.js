@@ -16,7 +16,7 @@ let store = {
                 {id: 1, name: 'Evgeniy'},
                 {id: 2, name: 'Volodya'},
                 {id: 3, name: 'Boss'},
-                {id: 4, name: 'ALeksndr'},
+                {id: 4, name: 'ALeksandr'},
                 {id: 5, name: 'Shura'},
                 {id: 6, name: 'Kachka'},
                 {id: 7, name: 'Sergei'}],
@@ -35,7 +35,7 @@ let store = {
     _callSubscriber() {
 
     },
-    coolBack(observer) {
+    subscribe(observer) {
         this._callSubscriber = observer
     },
     dispatch(action) {
