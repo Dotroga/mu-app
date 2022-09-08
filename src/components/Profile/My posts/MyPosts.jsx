@@ -1,19 +1,20 @@
 import React from "react";
 import Post from './Post/Post'
 import s from './MyPosts.module.css'
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 
 
 const MyPosts = (props) => {
     let postElements = props.profilePage.posts.map(p =>
         <Post message={p.message} likeCount={p.likeCount}/>)
+
     let newPostElement = React.createRef()
-    let AddPost = () => {
-        props.dispatch(addPostActionCreator())
+
+    let onAddPost = () => {
+        props.addPost()
     }
     let onPostChange = () => {
         let text = newPostElement.current.value
-        props.dispatch(updateNewPostTextActionCreator(text))
+        props.updateNewPost(text)
     }
     return (
         <div className={s.container}>
@@ -28,7 +29,7 @@ const MyPosts = (props) => {
                     placeholder="What 's new with you ?"/>
                 </div>
                 <div>
-                    <button onClick={AddPost}>Add posts</button>
+                    <button onClick={onAddPost}>Add posts</button>
                 </div>
             </div>
             <div>

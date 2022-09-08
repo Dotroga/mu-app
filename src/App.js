@@ -6,9 +6,9 @@ import Profile from './components/Profile/Profile'
 import News from "./components/News/News";
 import s from "./components/Profile/Profile.module.css";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
     return (
@@ -19,12 +19,10 @@ const App = (props) => {
                 <div className={s.content}>
                     <Routes>
                         <Route path='/profile' element={<Profile
-                            profilePage={props.state.profilePage}
-                            dispatch={props.dispatch}
+                            store={props.store}
                         />}/>
-                        <Route path='/dialogs' element={<Dialogs
-                            dialogsPage={props.state.dialogsPage}
-                            dispatch={props.dispatch}
+                        <Route path='/dialogs' element={<DialogsContainer
+                            store={props.store}
                         />}/>
                         <Route path='/news' element={<News />}/>
                         <Route path='/music' element={<Music />}/>
