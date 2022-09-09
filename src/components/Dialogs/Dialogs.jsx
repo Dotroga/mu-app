@@ -2,7 +2,6 @@ import React from "react";
 import s from '../Dialogs/Dialogs.module.css'
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Messages from "./Messages/Messeges";
-import {addMessageActionCreator, updateNewMessagesActionCreator} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
     let state = props.dialogsPage
@@ -11,8 +10,8 @@ const Dialogs = (props) => {
     let messagesElements = props.dialogsPage.messages.map(m => <Messages message={m.message}/>)
     let newMessageElement = React.createRef()
 
-    let onSendMessege = () => {
-        props.SendMessege()
+    let onSendMessage = () => {
+        props.sendMessage()
     }
     let onMessageChange = () => {
         let text = newMessageElement.current.value
@@ -26,7 +25,7 @@ const Dialogs = (props) => {
                 value={props.dialogsPage.newMessageText}
                 onChange={onMessageChange}
             ></textarea>
-            <button onClick={onSendMessege}>To send</button>
+            <button onClick={onSendMessage}>To send</button>
         </div>
         <div className={s.line}></div>
         <div className={s.dialogsItem}>
