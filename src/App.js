@@ -9,6 +9,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersListContainer from "./components/UsersList/UsersListContainer";
 
 const App = (props) => {
     return (
@@ -22,6 +23,7 @@ const App = (props) => {
                         <Route path='/dialogs' element={<DialogsContainer/>}/>
                         <Route path='/news' element={<News />}/>
                         <Route path='/music' element={<Music />}/>
+                        <Route path='/users' element={<UsersListContainer/>}/>
                         <Route path='/Settings' element={<Settings />}/>
                     </Routes>
                 </div>
