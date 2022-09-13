@@ -1,71 +1,18 @@
 import React from "react";
 import s from './UsersList.modules.css'
-
-
+import * as axios from "axios";
+import userPhoto from './../../img/user.png'
 
 let UsersList = (props) => {
     if (props.users.length === 0) {
-        props.setUsers([
-                {
-                    id: 1,
-                    followed: false,
-                    photoUrl: '',
-                    name: 'Vasili',
-                    surname: 'Karpenkin',
-                    status: 'Studying react',
-                    location: {
-                        country: 'Belarus',
-                        city: 'Gomel'
-                    },
-                    age: 25
-                },
-                {
-                    id: 2,
-                    followed: true,
-                    photoUrl: '',
-                    name: 'Anna',
-                    surname: 'Karpenkina',
-                    status: 'Young mother',
-                    location: {
-                        country: 'Belarus',
-                        city: 'Gomel'
-                    },
-                    age: 31
-                },
-                {
-                    id: 3,
-                    followed: true,
-                    photoUrl: '',
-                    name: 'Eseniya',
-                    surname: 'Karpenkina',
-                    status: 'happy',
-                    location: {
-                        country: 'Belarus',
-                        city: 'Gomel'
-                    },
-                    age: 1
-                },
-                {
-                    id: 4,
-                    followed: false,
-                    name: 'Igor',
-                    surname: 'Kondratenko',
-                    status: 'Studying Kotlin',
-                    location: {
-                        country: 'Belarus',
-                        city: 'Gomel'
-                    },
-                    age: 25
-                }
-            ]
-        )
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.setUsers(response.data.items)
+        })
     }
     return <div className={s.container}>
         {
             props.users.map(u => <div key={u.id}>
-                <div>
-                    <img src=""/>
-                </div>
+                    <img  src={u.photos.small != null ? u.photos.small : userPhoto} alt=""/>
                 <div>
                     {u.followed
                         ? <button  onClick={() => {props.follow(u.id)}} >Follow</button>
